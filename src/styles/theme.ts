@@ -1,4 +1,4 @@
-export const theme = {
+export const styleTheme = {
   background: {
     level_0: 'bg-slate-100 dark:bg-slate-900',
     level_1: 'bg-slate-200 dark:bg-slate-800',
@@ -56,17 +56,17 @@ export const theme = {
   }
 }
 export interface IStyleTheme {
-  background?: keyof typeof theme.background;
-  padding?: keyof typeof theme.padding;
-  margin?: keyof typeof theme.margin;
+  background?: keyof typeof styleTheme.background;
+  padding?: keyof typeof styleTheme.padding;
+  margin?: keyof typeof styleTheme.margin;
   border?: {
-    radius?: keyof typeof theme.border.radius;
-    size?: keyof typeof theme.border.radius;
-    color?: keyof typeof theme.border.color;
+    radius?: keyof typeof styleTheme.border.radius;
+    size?: keyof typeof styleTheme.border.radius;
+    color?: keyof typeof styleTheme.border.color;
   };
-  zIndex?: keyof typeof theme.zIndex;
+  zIndex?: keyof typeof styleTheme.zIndex;
   font?: {
-    weight: typeof theme.font.weight;
-    color: typeof theme.font.color;
+    weight: typeof styleTheme.font.weight;
+    color: typeof styleTheme.font.color;
   }
 }

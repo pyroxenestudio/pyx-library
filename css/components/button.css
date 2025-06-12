@@ -1,0 +1,5 @@
+@layer components {
+  .pyx-button {
+    @apply p-3
+  }
+}

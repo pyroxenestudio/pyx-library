@@ -9,11 +9,12 @@ export function asc(arr: Array<number>) {
 
 export function desc(arr: Array<number>) {
   const copyArr = arr.slice();
-  copyArr.sort((a,b) => a + b);
+  debugger;
+  copyArr.sort((a,b) => b - a);
   return copyArr;
 }
 
-export function BubbleSort(arr: Array<number>): Array<number> {
+export function bubbleSort(arr: Array<number>): Array<number> {
   const copyArr = arr.slice();
   const length = copyArr.length;
   let step = 1;
@@ -31,7 +32,7 @@ export function BubbleSort(arr: Array<number>): Array<number> {
   return copyArr;
 }
 
-export function CountingSort(arr: Array<number>): Array<number> {
+export function countingSort(arr: Array<number>): Array<number> {
   const finalArray: Array<number> = [];
   const countArray: Array<number> = [];
   for (let position = 0; position < arr.length; position++) {
@@ -52,8 +53,7 @@ export function CountingSort(arr: Array<number>): Array<number> {
   return finalArray;
 }
 
-export function QuickSort(arr: Array<number>): Array<number> {
-  console.time('QuickSort');
+export function quickSort(arr: Array<number>): Array<number> {
   const length = arr.length;
   const middlePosition = Math.floor(length/2);
   const pivot = [arr[0], arr[middlePosition], arr[length - 1]].sort()[1];
@@ -78,32 +78,30 @@ export function QuickSort(arr: Array<number>): Array<number> {
       }
     }
   }
+  if (arr[middlePosition] > pivot) {
+    upper.push(arr[middlePosition]);
+  } else {
+    lower.push(arr[middlePosition]);
+  }
   // Sort upper and lower
   upper.sort((a,b) => a - b);
   lower.sort((a,b) => a - b);
-  // console.log('Pivot', pivot);
-  // console.log('MiddlePosition', middlePosition);
-  // console.log('Lower', lower.length);
-  // console.log('Upper', upper.length);
-  console.timeEnd('QuickSort');
-  return [...lower,pivot,...upper];
+  return [...lower,...upper];
 }
 
-export function MergeSort(arr: number[]): number[] {
+export function mergeSort(arr: number[]): number[] {
   // const copyArr = arr.slice();
   if (arr.length <= 1) return arr;
 
   const middle = Math.floor(arr.length/2);
 
   // Example: [7,1,5,4]
-  const left = MergeSort(arr.slice(0, middle)); // [7,1] -> l[7], r[1]
-  const right = MergeSort(arr.slice(middle)); // [5,4] -> l[5], r[4]
+  const left = mergeSort(arr.slice(0, middle)); // [7,1] -> l[7], r[1]
+  const right = mergeSort(arr.slice(middle)); // [5,4] -> l[5], r[4]
 
   const finalArray = [];
   let positionLeft = 0;
   let positionRight = 0;
-  
-  console.log('left', left, 'right', right);
 
   while (positionLeft < left.length && positionRight < right.length) {
     if (left[positionLeft] < right[positionRight]) {

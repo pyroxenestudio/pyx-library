@@ -1,0 +1,53 @@
+@layer base {
+  html {
+    @apply scheme-light dark:scheme-dark
+  }
+
+  body, html {
+    display: flex;
+    min-height: 100%;
+    /* min-height: 100vh; */
+    flex: 1 1 auto;
+    flex-direction: column;
+    text-align: center;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @apply bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300;
+    @apply font-normal;
+  }
+  
+  #root {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+  }
+
+  button {
+    @apply rounded-sm;
+  }
+
+  button, select {
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    cursor: none;
+    pointer-events: none;
+  }
+
+  input, select {
+    @apply focus:outline-none border rounded-sm font-normal p-1;
+  }
+
+  input[type='range'] {
+    @apply p-0
+  }
+
+  label {
+    @apply font-semibold;
+  }
+}

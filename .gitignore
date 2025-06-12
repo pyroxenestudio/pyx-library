@@ -25,3 +25,5 @@ dist-ssr
 
 # Mine
 others.ts
+try.build.tsx
+# try.dev.tsx

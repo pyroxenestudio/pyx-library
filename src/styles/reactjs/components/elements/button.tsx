@@ -3,13 +3,12 @@ import { styleTheme } from "../../../theme";
 
 const buttonStyle = {
   success: 'success-interactive',
-  danger: 'danger',
-  warning: 'warning',
-  info: 'info'
+  danger: 'danger-interactive',
+  warning: 'warning-interactive',
+  info: 'info-interactive'
 }
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  // variant?: keyof Omit<typeof buttonStyle, 'main'>
   variant?: keyof typeof buttonStyle
   padding?: keyof typeof styleTheme.padding;
   radius?: keyof typeof styleTheme.border.radius;
@@ -24,6 +23,7 @@ export function PyxButton({
 
   // New Way
   rest.className = clsx(
+    'pyx-button',
     styleTheme.padding[padding],
     radius && styleTheme.border.radius[radius],
     variant && buttonStyle[variant],

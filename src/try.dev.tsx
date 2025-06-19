@@ -25,8 +25,40 @@ console.log(sortedArray);
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <div>
+      <header className='pyx-navbar'>
+        <h1>Patata</h1>
+        <nav>
+          <ul>
+            <li><a href='#'>Patata</a></li>
+            <li><a href='#'>Patata 2</a></li>
+            <li><a href='#'>Patata 3</a></li>
+          </ul>
+        </nav>
+        <button className='pyx-button menu-button'>Toggle</button>
+      </header>
       <button className='danger'>Este es el boton</button>
-      <PyxButton variant='success'>This is the pyx button</PyxButton>
+      <PyxButton variant='info'>This is the pyx button</PyxButton>
+      <input type='text' placeholder='Search'/>
+      <div className='level-0'>Esto es el level-0</div>
+      <div className='level-1'>Esto es el level-1</div>
+      <div className='level-2'>Esto es el level-2</div>
+      <div className='level-3'>Esto es el level-3</div>
+      <div className='level-4'>Esto es el level-4</div>
+      <form>
+        <p><label>Prueba de texto<input type='text' name='prueba'/></label></p>
+        <p><label>prueba de email<input type='email' name='prueba'/></label></p>
+        <fieldset>
+          <legend>Prueba del legend</legend>
+          <p><label> <input type='radio' name='size' /> Small </label></p>
+          <p><label> <input type='radio' name='size' /> Medium </label></p>
+          <p><label> <input type='radio' name='size' /> Large </label></p>
+        </fieldset>
+        <select>
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+      </form>
     </div>
   </StrictMode>
 )

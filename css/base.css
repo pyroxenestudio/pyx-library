@@ -28,6 +28,7 @@
 
   button {
     @apply rounded-sm;
+    @apply p-2
   }
 
   button, select {
@@ -39,8 +40,18 @@
     pointer-events: none;
   }
 
+  form {
+
+    & > * {
+      @apply mb-2;
+      &:last-child {
+        @apply mb-0;
+      }
+    }
+  }
+
   input, select {
-    @apply focus:outline-none border rounded-sm font-normal p-1;
+    @apply focus:outline-none rounded-sm font-normal p-2 level-1 border-1;
   }
 
   input[type='range'] {
@@ -48,6 +59,6 @@
   }
 
   label {
-    @apply font-semibold;
+    @apply font-semibold flex flex-col items-center;
   }
 }

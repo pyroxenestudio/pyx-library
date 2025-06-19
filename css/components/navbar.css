@@ -1,0 +1,55 @@
+@layer components {
+  header.pyx-navbar {
+    @apply flex flex-col level-0 mb-2 justify-center items-center relative;
+    /* Media Desktop*/
+    @apply sm:p-3 sm:flex-row sm:justify-start sm:mb-0;
+    & > * {
+      @apply hidden;
+
+      /* Media Desktop */
+      @apply sm:block;
+    }
+    &.open > * {
+      @apply block;
+    }
+    .menu-button {
+      @apply block absolute top-0 right-0;
+
+      /* Media Desktop*/
+      @apply sm:hidden;
+    }
+    h1 {
+      @apply px-4 py-2 self-stretch text-left block;
+    }
+    nav {
+      @apply self-stretch;
+
+      /* Media Desktop */
+      /* @apply sm:block; */
+      ul {
+        /* Media Desktop */
+        @apply sm:flex;
+        a {
+          @apply px-4 py-2 block;
+          /* Hover, Focus */
+          @apply hover:level-2 focus:level-2;
+        }
+      }
+    }
+  }
+}
+/* 
+Full HTML
+
+<header className='pyx-navbar'>
+  <h1>Patata</h1>
+  <nav>
+    <ul>
+      <li><a href='#'>Link 1</a></li>
+      <li><a href='#'>Link 2</a></li>
+      <li><a href='#'>Link 3</a></li>
+    </ul>
+  </nav>
+  <button className='pyx-button menu-button'>Toggle</button>
+</header>
+*/

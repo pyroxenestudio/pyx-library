@@ -2,5 +2,5 @@
 @import "./theme.css";
 @import "./variants.css";
 @import "./helpers/main.css";
-@import "./components/main.css";
 @import "./base.css";
+@import "./components/main.css";

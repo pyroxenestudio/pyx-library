@@ -1,40 +1,70 @@
-/* Background Colors */
+/* LEVELS (Background) */
 @utility level-0 {
   background-color: var(--color-slate-100);
+  border-color: var(--color-slate-200);
+  color: var(--color-slate-700);
   @variant dark {
     background-color: var(--color-slate-900);
+    border-color: var(--color-slate-800);
+    color: var(--color-slate-200);
   }
 }
 
 @utility level-1 {
   background-color: var(--color-slate-200);
+  border-color: var(--color-slate-200);
+  color: var(--color-slate-700);
   @variant dark {
     background-color: var(--color-slate-800);
+    border-color: var(--color-slate-700);
+    color: var(--color-slate-200);
+  }
+  @variant focus {
+    border-color: var(--color-slate-400);
+    @variant dark{
+      border-color: var(--color-slate-600);
+    }
   }
 }
 
 @utility level-2 {
   background-color: var(--color-slate-300);
+  border-color: var(--color-slate-300);
+  color: var(--color-slate-800);
   @variant dark {
     background-color: var(--color-slate-700);
+    border-color: var(--color-slate-700);
+    color: var(--color-slate-100);
+  }
+  @variant focus {
+    border-color: var(--color-slate-400);
+    @variant dark{
+      border-color: var(--color-slate-600);
+    }
   }
 }
 
 @utility level-3 {
   background-color: var(--color-slate-400);
+  color: var(--color-black);
+  border-color: var(--color-slate-400);
   @variant dark {
     background-color: var(--color-slate-600);
+    border-color: var(--color-slate-600);
+    color: var(--color-slate-100);
+  }
+  @variant focus {
+    border-color: var(--color-slate-500);
   }
 }
 
 @utility level-4 {
   background-color: var(--color-slate-500);
+  border-color: var(--color-slate-500);
+  color: var(--color-white);
 }
 
-/* Colors */
-
-/* No interactives */
-
+/* BASIC COLORS */
 @utility success {
   background-color: var(--color-green-200);
   color: var(--color-slate-800);
@@ -71,7 +101,7 @@
   }
 }
 
-/* Interactives */
+/* INTERACTIVES BASIC COLORS  */
 @utility success-interactive {
   background-color: var(--color-green-200);
   color: var(--color-slate-800);
@@ -155,3 +185,5 @@
     }
   }
 }
+
+/* BORDER COLOR */

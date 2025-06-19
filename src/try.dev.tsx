@@ -6,6 +6,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { audioUrlToBase64, desc, mergeSort, PyxButton, quickSort } from './main';
 import { consoleError, consoleWarning } from './utils/logger/error-controller';
+import PyxNavbar from './styles/reactjs/components/compound/navbar';
 
 console.log(audioUrlToBase64);
 
@@ -25,7 +26,7 @@ console.log(sortedArray);
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <div>
-      <header className='pyx-navbar'>
+      {/* <header className='pyx-navbar'>
         <h1>Patata</h1>
         <nav>
           <ul>
@@ -35,7 +36,8 @@ createRoot(document.getElementById('root')!).render(
           </ul>
         </nav>
         <button className='pyx-button menu-button'>Toggle</button>
-      </header>
+      </header> */}
+      <PyxNavbar logo='LOGO' links={[<a href='#'>Patata</a>, <a href='#'>Patata 2</a>, <a href='#'>Patata 3</a>]} />
       <button className='danger'>Este es el boton</button>
       <PyxButton variant='info'>This is the pyx button</PyxButton>
       <input type='text' placeholder='Search'/>

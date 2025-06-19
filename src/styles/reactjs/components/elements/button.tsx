@@ -23,7 +23,6 @@ export function PyxButton({
 
   // New Way
   rest.className = clsx(
-    'pyx-button',
     styleTheme.padding[padding],
     radius && styleTheme.border.radius[radius],
     variant && buttonStyle[variant],

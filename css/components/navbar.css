@@ -1,6 +1,6 @@
 @layer components {
   header.pyx-navbar {
-    @apply flex flex-col level-0 mb-2 justify-center items-center relative;
+    @apply flex flex-col level-0 mx-2 mt-2 justify-center items-center relative;
     /* Media Desktop*/
     @apply sm:p-3 sm:flex-row sm:justify-start sm:mb-0;
     & > * {
@@ -19,7 +19,7 @@
       @apply sm:hidden;
     }
     h1 {
-      @apply px-4 py-2 self-stretch text-left block;
+      @apply p-2 self-stretch text-left block;
     }
     nav {
       @apply self-stretch;
@@ -32,7 +32,7 @@
         a {
           @apply px-4 py-2 block;
           /* Hover, Focus */
-          @apply hover:level-2 focus:level-2;
+          @apply hover:level-1 hover:rounded-sm focus:level-2;
         }
       }
     }

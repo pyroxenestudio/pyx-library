@@ -1,10 +1,10 @@
 export const styleTheme = {
   background: {
-    level_0: 'bg-slate-100 dark:bg-slate-900',
-    level_1: 'bg-slate-200 dark:bg-slate-800',
-    level_2: 'bg-slate-300 dark:bg-slate-700',
-    level_3: 'bg-slate-400 dark:bg-slate-600',
-    level_4: 'bg-slate-500'
+    level_0: 'level-0',
+    level_1: 'level-1',
+    level_2: 'level-2',
+    level_3: 'level-3',
+    level_4: 'level-4'
   },
   padding: {
     no: 'p-0',

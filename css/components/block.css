@@ -1,0 +1,5 @@
+@layer components {
+  .pyx-block {
+    @apply block mb-2;
+  }
+}

@@ -6,7 +6,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { audioUrlToBase64, desc, mergeSort, PyxButton, quickSort } from './main';
 import { consoleError, consoleWarning } from './utils/logger/error-controller';
-import PyxNavbar from './styles/reactjs/components/compound/navbar';
+import {PyxNavbar} from './styles/reactjs/components/compound/navbar';
 
 console.log(audioUrlToBase64);
 
@@ -60,6 +60,9 @@ createRoot(document.getElementById('root')!).render(
           <option>Option 2</option>
           <option>Option 3</option>
         </select>
+        <div className='pyx-block'>
+          This is the block
+        </div>
       </form>
     </div>
   </StrictMode>

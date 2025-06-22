@@ -8,3 +8,4 @@ export { useLocalStorageState } from './reactjs/hooks/useLocalStorageState';
 
 // React Style Components
 export { PyxButton } from './styles/reactjs/components/elements/button';
+export { PyxNavbar } from './styles/reactjs/components/compound/navbar';

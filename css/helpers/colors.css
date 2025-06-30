@@ -101,7 +101,7 @@
   }
 }
 
-/* INTERACTIVES BASIC COLORS  */
+/* INTERACTIVES BASIC COLORS */
 @utility success-interactive {
   background-color: var(--color-green-200);
   color: var(--color-slate-800);

@@ -1,38 +1,40 @@
 @layer components {
   header.pyx-navbar {
-    @apply flex flex-col level-0 mx-2 mt-2 justify-center items-center relative;
+    @apply flex flex-col level-0 justify-center items-center;
     /* Media Desktop*/
-    @apply sm:p-3 sm:flex-row sm:justify-start sm:mb-0;
-    & > * {
-      @apply hidden;
-
-      /* Media Desktop */
-      @apply sm:block;
-    }
-    &.open > * {
-      @apply block;
+    @apply sm:p-3 sm:flex-row sm:justify-start sm:m-0;
+    
+    &.open {
+      nav {
+        @apply transition-[height] duration-500 ease-in-out h-full;
+        ul {
+          a {
+            @apply hover:level-2 focus:level-2;
+          }
+        }
+      }
     }
     .menu-button {
-      @apply block absolute top-0 right-0;
+      @apply block absolute top-0 right-0 z-10;
 
       /* Media Desktop*/
       @apply sm:hidden;
     }
     h1 {
-      @apply p-2 self-stretch text-left block;
+      @apply p-2 self-start text-left block z-10;
     }
     nav {
-      @apply self-stretch;
+      @apply transition-[height] duration-500 ease-in-out self-stretch h-0 overflow-hidden absolute top-0 w-full level-1 z-9;
 
       /* Media Desktop */
-      /* @apply sm:block; */
+      @apply sm:relative sm:w-auto sm:h-auto sm:level-0;
       ul {
         /* Media Desktop */
         @apply sm:flex;
         a {
           @apply px-4 py-2 block;
           /* Hover, Focus */
-          @apply hover:level-1 hover:rounded-sm focus:level-2;
+          @apply hover:level-1 hover:rounded-sm focus:level-1;
         }
       }
     }

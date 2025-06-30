@@ -13,7 +13,15 @@ export const styleTheme = {
     big: 'p-3'
   },
   margin: {
-    no: 'm-0',
+    no: {
+      all: 'm-0',
+      bottom: 'mb-0',
+      top: 'mt-0',
+      left: 'ml-0',
+      right: 'mr-0',
+      horizontal: 'mx-0',
+      vertical: 'my-0'
+    },
     small: 'm-1',
     normal: 'm-2',
     big: 'm-3'

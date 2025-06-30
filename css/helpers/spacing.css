@@ -1,0 +1,21 @@
+/* Margin No */
+@utility m-no {
+  margin: calc(var(--spacing) * 0);
+}
+
+@utility mb-no {
+  margin-bottom: calc(var(--spacing) * 0);
+}
+
+/* Margin Small */
+@utility m-small {
+  margin: calc(var(--spacing) * 1);
+}
+
+@utility m-normal {
+  margin: calc(var(--spacing) * 2);
+}
+
+@utility m-big {
+  margin: calc(var(--spacing) * 3);
+}

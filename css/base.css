@@ -41,7 +41,6 @@
   }
 
   form {
-
     & > * {
       @apply mb-2;
       &:last-child {

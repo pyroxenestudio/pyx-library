@@ -6,7 +6,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { audioUrlToBase64, desc, mergeSort, PyxButton, quickSort } from './main';
 import { consoleError, consoleWarning } from './utils/logger/error-controller';
-import {PyxNavbar} from './styles/reactjs/components/compound/navbar';
+import {PyxNavbar} from './styles/reactjs/components/compound/PyxNavbar';
 
 console.log(audioUrlToBase64);
 
@@ -25,46 +25,17 @@ console.log(sortedArray);
 // REACTJS
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <div>
-      {/* <header className='pyx-navbar'>
-        <h1>Patata</h1>
-        <nav>
-          <ul>
-            <li><a href='#'>Patata</a></li>
-            <li><a href='#'>Patata 2</a></li>
-            <li><a href='#'>Patata 3</a></li>
-          </ul>
-        </nav>
-        <button className='pyx-button menu-button'>Toggle</button>
-      </header> */}
+    <>
       <PyxNavbar logo='LOGO' links={[<a href='#'>Patata</a>, <a href='#'>Patata 2</a>, <a href='#'>Patata 3</a>]} />
-      <button className='danger'>Este es el boton</button>
-      <PyxButton variant='info'>This is the pyx button</PyxButton>
-      <input type='text' placeholder='Search'/>
-      <div className='level-0'>Esto es el level-0</div>
-      <div className='level-1'>Esto es el level-1</div>
-      <div className='level-2'>Esto es el level-2</div>
-      <div className='level-3'>Esto es el level-3</div>
-      <div className='level-4'>Esto es el level-4</div>
-      <form>
-        <p><label>Prueba de texto<input type='text' name='prueba'/></label></p>
-        <p><label>prueba de email<input type='email' name='prueba'/></label></p>
-        <fieldset>
-          <legend>Prueba del legend</legend>
-          <p><label> <input type='radio' name='size' /> Small </label></p>
-          <p><label> <input type='radio' name='size' /> Medium </label></p>
-          <p><label> <input type='radio' name='size' /> Large </label></p>
-        </fieldset>
-        <select>
-          <option>Option 1</option>
-          <option>Option 2</option>
-          <option>Option 3</option>
-        </select>
-        <div className='pyx-block'>
-          This is the block
-        </div>
-      </form>
-    </div>
+      <div className='content'>
+        <h2 className='text-2xl'>Title</h2>
+        <h3 className='text-xl'>Subtitle</h3>
+        <PyxButton variant='info'>Button info</PyxButton>
+      </div>
+      <footer>
+        Este es el footer
+      </footer>
+    </>
   </StrictMode>
 )
 function consoleInfo(arg0: string, arg1: boolean) {

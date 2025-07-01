@@ -27,7 +27,7 @@ export function useLocalStorage() {
 
   function save<T>(name: string, value: T, expireDate?: Date): boolean {
     if (name === undefined || name === '') return consoleError('name is empty', false);
-    if (value === undefined) return consoleError('value is empty', false);
+    if (value === undefined || value === '') return consoleError('value is empty', false);
 
     if (expireDate) {
       localStorage.setItem(name, JSON.stringify({value, expireDate: expireDate.valueOf()}));

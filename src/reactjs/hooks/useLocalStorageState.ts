@@ -13,7 +13,7 @@ export function useLocalStorageState<T>(name: string) {
     if (value !== null && value !== undefined) {
       localStorage.setItem(name, JSON.stringify(value));
     } else {
-      localStorage.removeItem(name)
+      localStorage.removeItem(name);
     }
     setStateDefault(value);
   }

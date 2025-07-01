@@ -10,9 +10,23 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   // plugins: [react()],
   test: {
-    globals: true,
+    globals: true, // habilita el scope global
     environment: "jsdom", // Necesario para testear el DOM en React
     setupFiles: "./setupTests.ts", // Archivo opcional para configurar Testing Library
+    coverage: {
+      reporter: ['text', 'html'],
+      exclude: [
+        'src/try.*',
+        'src/*.d.ts'
+      ],
+      include: ['src/**/*'],
+      thresholds: {
+        lines: 80,
+        functions: 80,
+        branches: 80,
+        statements: 80,
+      }
+    },
   },
   build: {
     outDir: 'dist',

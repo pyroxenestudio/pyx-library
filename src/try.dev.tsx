@@ -14,7 +14,12 @@ console.log(audioUrlToBase64);
 // const unSortedArray = Array.from({length: 40}, () => Math.floor(Math.random() * 40));
 const unSortedArray = [9,5,3,2,6];
 const sortedArray = mergeSort(unSortedArray);
-console.log(sortedArray);
+audioUrlToBase64('/test/utils/audio/cat.mp3').then((value) => {
+  console.log(value);
+}).catch(((error) => {
+  console.log(error);
+}));
+// console.log(sortedArray);
 
 // Check Error
 // consoleWarning('Patata con salsa', false);

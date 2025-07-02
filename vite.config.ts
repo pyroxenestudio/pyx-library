@@ -17,7 +17,8 @@ export default defineConfig({
       reporter: ['text', 'html'],
       exclude: [
         'src/try.*',
-        'src/*.d.ts'
+        'src/*.d.ts',
+        'src/styles/theme.ts'
       ],
       include: ['src/**/*'],
       thresholds: {

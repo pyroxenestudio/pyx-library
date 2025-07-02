@@ -2,16 +2,19 @@ import { renderHook, act } from '@testing-library/react';
 import {useLocalStorageRef} from './../../src/reactjs/hooks/useLocalStorageRef';
 
 test('useLocalStorageRef hook', () => {
-  const {result} = renderHook(() => useLocalStorageRef('patata'));
+  const {result, rerender} = renderHook(() => useLocalStorageRef('patata'));
 
   expect(result.current.current).toBe(null);
 
   // Save the value
-  // result.current.setRef('this is a potato');
-  // expect(result.current.current).toBe('this is a potato');
+  result.current.setRef('this is a potato');
+  rerender();
+  expect(result.current.current).toBe('this is a potato');
+
 
   // Remove
   result.current.setRef(null);
+  rerender();
   expect(result.current.current).toBe(null);
 });
 

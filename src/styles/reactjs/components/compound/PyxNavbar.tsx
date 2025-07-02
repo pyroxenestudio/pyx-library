@@ -15,10 +15,18 @@ export function PyxNavbar ({links, logo, callback}: NavbarPropsInterface) {
 
   const linkList = useMemo(() => {
     const list = links.map((link, index) => {
-      return <li key={index}>{React.cloneElement(link, {onClick: () => {setOpen(!open)}})}</li>
+      return <li key={index}>{React.cloneElement(link, {onClick: () => {
+        setOpen(!open)}
+      })}</li>
     });
     return <ul>{list}</ul>
-  }, []);
+  }, [open]);
+
+  const toggleMenu = (e: React.MouseEvent<HTMLElement>) => {
+    e.stopPropagation();
+    if (callback) callback();
+    setOpen(!open);
+  }
 
   const headerClassName = clsx('pyx-navbar', {open});
 
@@ -28,12 +36,7 @@ export function PyxNavbar ({links, logo, callback}: NavbarPropsInterface) {
       <nav>
         {linkList}
       </nav>
-      <button className='pyx-button menu-button' onClick={(e) => {
-        e.stopPropagation();
-        console.log('PULSADO');
-        setOpen(!open);
-        if (callback) callback();
-      }}>
+      <button aria-label="Close" className='pyx-button menu-button' onClick={toggleMenu}>
         {open ? <XMarkIcon className='size-6' /> : <Bars3Icon className='size-6'/>}
       </button>
     </header>

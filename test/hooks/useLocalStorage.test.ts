@@ -20,7 +20,7 @@ test('useLocalStorage hook with expiration date', () => {
 
   const {result} = renderHook(() => useLocalStorage());
   const {getValue, save} = result.current;
-  const date = new Date();
+  let date = new Date();
   // Substract one day
   date.setDate(date.getDate() - 1);
   // Save the value
@@ -28,6 +28,12 @@ test('useLocalStorage hook with expiration date', () => {
   // Check if the date is expire so it will remove it
   expect(getValue('patata')).toBe(null);
 
+  // Set date to one day in advance
+  date = new Date();
+  date.setDate(date.getDate() + 1);
+  save('patata', 'this is a potato with expire date', date);
+  // Check if the date is not expire so it won't be removed
+  expect(getValue('patata')).toBe('this is a potato with expire date');
 });
 
 test('useLocalStorage check errors', () => {
@@ -39,6 +45,8 @@ test('useLocalStorage check errors', () => {
   expect(getValue('')).toBe(null);
 
   expect(save('', '')).toBe(false);
+
+  expect(save('patata', '')).toBe(false);
 
   expect(remove('')).toBe(false);
 

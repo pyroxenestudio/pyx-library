@@ -44,7 +44,6 @@ export function useLocalStorage() {
   }
 
   function checkDate(date: Date) {
-    if (!date) return false;
     date = new Date(date);
     const today = new Date();
 
